@@ -1,0 +1,3 @@
+chart of the status codes
+'''index = linux_nginx_access_log
+| timechart span=1h count by status'''
