@@ -1,1 +1,4 @@
 index=win_webapp_log | rex field=_raw "(?<field1>[^|]+)\|(?<web_app_type>[^|]+)\|(?<field3>[^|]+)\|(?<field4>[^|]+)"
+
+
+index=win_webapp_log  | rex field=_raw "(?<event_time>\d{1,2}/\d{1,2}/\d{4} \d{1,2}:\d{2}:\d{2} (AM|PM))\|(?<web_app_type>[^|]+)\|(?<field3>[^|]+)\|(?<ip_address>\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b)\|(?<field5>[^|]+)\|(?<field6>[^|]+)\|(?<field7>[^|]+)"
