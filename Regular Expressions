@@ -1,0 +1,1 @@
+index=win_webapp_log | rex field=_raw "(?<field1>[^|]+)\|(?<web_app_type>[^|]+)\|(?<field3>[^|]+)\|(?<field4>[^|]+)"
