@@ -1,0 +1,4 @@
+index=linux_log OR index=linux* AND source=/usr/local/nginx/logs/access.log OR source=/usr/local/nginx/logs/error.log OR /var/log/webapp.log OR /var/log/audit/audit.log 
+| stats latest(_time) as last_received_time by source
+| convert ctime(last_received_time) as last_received_time
+| table source last_received_time
