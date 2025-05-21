@@ -1,0 +1,13 @@
+get link from - https://www.splunk.com/en_us/download/universal-forwarder.html
+/opt/splunk/bin/splunk -version
+dh -f // id space availabel
+dh -f | grep home
+wget -O
+sha512sum [file downloaded]
+ systemctl status Splunkd.service
+ systemctl stop Splunkd.service
+sudo systemctl stop  fapolicyd
+ rm -Rf /opt/splunk/etc_backup/
+ cp -R /opt/splunk/etc/ /opt/splunk/splunk_etc_back
+ tar xzf splunk-9.4.2-e9664af3d956-linux-amd64.tgz -C /opt
+/opt/splunk/bin/splunk start
